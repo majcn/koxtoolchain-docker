@@ -49,7 +49,7 @@ COPY --from=install_go /usr/local/go/ /usr/local/go/
 RUN echo '#!/bin/bash\n\
 \n\
 set -a\n\
-HOME=/home/tc source /home/tc/bin/x-compile.sh ${TARGET} env bare\n\
+HOME=/home/tc source /home/tc/bin/x-compile.sh '${TARGET}' env bare\n\
 set +a\n\
 \n\
 export CC=$CROSS_TC-gcc\n\
